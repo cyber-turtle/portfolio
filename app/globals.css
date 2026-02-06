@@ -1,26 +1,372 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #050505;
+  --color-text: #f0f0f0;
+  --color-accent: #ccff00;
+  
+  --font-space: ui-sans-serif, system-ui, sans-serif; /* Fallback, handled by next/font */
+  --font-syne: ui-serif, serif; /* Fallback */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-background: var(--color-bg);
+    --color-foreground: var(--color-text);
+    --color-accent: var(--color-accent);
+    
+    --font-space: var(--font-space);
+    --font-syne: var(--font-syne);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-space);
+  overflow-x: hidden;
+  cursor: none; /* Custom cursor */
+  margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-syne);
+}
+
+
+/* --- Custom Utilities from test.html --- */
+.blend-exclusion {
+    mix-blend-mode: exclusion;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    color: transparent;
+    transition: all 0.3s ease;
+}
+.group:hover .text-outline {
+    -webkit-text-stroke: 1px #ccff00;
+    color: #ccff00;
+}
+
+.wavy-border {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%; 
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(204, 255, 0, 0.5);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+/* --- Missing Styles & Animations --- */
+.hero-text {
+    font-size: clamp(2rem, 10vw, 12rem);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.skill-tag:hover { 
+    animation-play-state: paused !important; 
+}
+
+
+/* --- Split Curtain Loader --- */
+.loader-panel {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #ffffff;
+    z-index: 10000;
+    transition: transform 1.2s cubic-bezier(0.8, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.panel-left {
+    left: 0;
+    border-right: none;
+}
+
+.panel-right {
+    right: 0;
+    border-left: none;
+}
+
+/* --- Image Pan Hover Effect --- */
+.image-pan-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-pan-container {
+    mask-image: linear-gradient(to bottom, black, black); /* Ensure clean edges during scale */
+}
+
+.image-pan-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%; /* Start top-left */
+    transform: scale(1);
+    transition: object-position 6s cubic-bezier(0.4, 0, 0.2, 1), transform 6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-pan-container:hover img {
+    object-position: 100% 100%; /* Pan to bottom-right */
+    transform: scale(1.15); /* Slightly more zoom for modal/showcase impact */
+}
+
+/* --- Missing Styles & Animations --- */
+.loader-content-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.loader-fade-out {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+    pointer-events: none;
+}
+
+.loader-btn-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loader-btn-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.loader-bar-container {
+    transition: all 0.5s ease;
+}
+
+.loader-bar-container.hide {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+/* Animation States */
+body.loaded .panel-left {
+    transform: translateX(-100%);
+}
+
+body.loaded .panel-right {
+    transform: translateX(100%);
+}
+
+body.loaded .loader-content-wrapper {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Remove from flow after animation */
+body.loaded-complete .loader-panel,
+body.loaded-complete .loader-content-wrapper {
+    display: none;
+}
+
+/* --- Modal Adjustments for Mobile --- */
+/* --- Modal Adjustments for Mobile & Vertical constraints --- */
+@media (max-width: 1024px) {
+    .glass-card-modal {
+        padding: 1.5rem !important;
+        max-height: 95vh !important;
+        width: 95vw !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .glass-card-modal {
+        padding: 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .modal-image-container {
+        height: 20vh !important; /* Fixed height ratio on mobile to save space */
+        min-height: 150px;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .modal-title {
+        font-size: clamp(1.25rem, 5vw, 2rem) !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.1 !important;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .modal-section-gap {
+        gap: 0.75rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .modal-overview {
+        font-size: 0.85rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .modal-challenges {
+        font-size: 0.75rem !important;
+        line-height: 1.25 !important;
+    }
+    
+    .modal-tech-tag {
+        font-size: 9px !important;
+        padding: 2px 6px !important;
+    }
+    
+    .modal-action-btn {
+        padding: 10px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* More extreme vertical scaling for iPhone SE and alike */
+@media (max-height: 700px) {
+    .modal-title { 
+        font-size: 1.25rem !important; 
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    .modal-image-container { height: 15vh !important; }
+    .modal-section-gap { gap: 0.5rem !important; }
+    .modal-overview, .modal-challenges { 
+        display: -webkit-box; 
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical; 
+        overflow: hidden; 
+        line-clamp: 2; 
+    }
+}
+
+/* Hide native scrollbar for modal while keeping functionality */
+.glass-card-modal {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.glass-card-modal::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar-track {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 105;
+}
+
+.custom-scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ccff00;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+    box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+@media (max-height: 600px) {
+    .modal-image-container { display: none !important; }
+}
+
+
