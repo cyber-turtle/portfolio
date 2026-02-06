@@ -229,7 +229,7 @@ export default function Home() {
                   
                   <div className="flex flex-wrap gap-4 md:gap-6">
                       {['Three.js', 'React', 'React Native', 'TypeScript', 'Next.js', 'Node.js', 'WebGL', 'GLSL Shaders', 'GSAP', 'Tailwind CSS', 'Python', 'Flask', 'FastAPI', 'Spring Boot', 'Laravel', '.NET', 'C', 'C#', 'C++', 'Java', 'SwiftUI', 'OpenCV', 'Microsoft Kinect SDK', 'Figma', 'Godot', 'Git / Version Control', 'Postman', 'Docker', 'Vercel', 'Railway', 'LangChain', 'Ollama', 'ChromaDB', 'PyTorch', 'PostgreSQL', 'SQLite', 'MySQL', 'MongoDB', 'Express.js', 'Socket.io', 'WebRTC', 'Zustand', 'E2E Encryption'].map((skill, i) => (
-                           <span key={skill} className="skill-tag text-2xl md:text-4xl font-bold border-2 border-black px-6 py-3 rounded-full hover:bg-black hover:text-[#ccff00] transition-all cursor-none" style={{
+                           <span key={skill} className="skill-tag text-lg md:text-4xl font-bold border-2 border-black px-4 py-2 md:px-6 md:py-3 rounded-full hover:bg-black hover:text-[#ccff00] transition-all cursor-none max-w-full text-center whitespace-nowrap md:whitespace-normal" style={{
                               animation: `float ${0.2 * i + 3}s ease-in-out infinite`
                            }}>
                                {skill}
