@@ -27,8 +27,12 @@ body {
   color: var(--color-text);
   font-family: var(--font-space);
   overflow-x: hidden;
-  cursor: none; /* Custom cursor */
-  margin: 0;
+}
+
+@media (pointer: fine) {
+  body {
+      cursor: none; /* Custom cursor only on non-touch devices */
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

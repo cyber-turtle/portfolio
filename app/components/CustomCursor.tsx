@@ -51,6 +51,12 @@ export default function CustomCursor() {
                     z-index: 20000;
                     pointer-events: none;
                     mix-blend-mode: difference;
+                    display: none; /* Hidden by default */
+                }
+                @media (pointer: fine) {
+                    #cursor-dot, #cursor-outline {
+                        display: block; /* Only show on devices with a fine pointer (mouse) */
+                    }
                 }
                 #cursor-dot {
                     width: 8px;
