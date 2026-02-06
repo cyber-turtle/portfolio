@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     // Initialize audio on mount
-    const audioPath = process.env.NODE_ENV === 'production' ? '/portfolio/soundrack.mp3' : '/soundrack.mp3';
+    const audioPath = '/soundrack.mp3';
     const audio = new Audio(audioPath);
     // checking file list again... Step 237 says "soundrack.mp3"
     audio.loop = true;
@@ -92,8 +92,6 @@ export default function Home() {
         setTimeout(handleModalScroll, 100);
     }
   }, [selectedProject]);
-
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
 
   return (
     <div className={`min-h-screen relative ${isHyperdrive ? 'animate-shake' : ''}`}>
@@ -203,7 +201,7 @@ export default function Home() {
                       <div className="absolute inset-0 flex items-center justify-center overflow-hidden wavy-border group">
                           {/* Profile Image (Replaces 'AD') */}
                           <img 
-                            src={`${basePath}/profile-me.jpg`} 
+                            src={`/profile-me.jpg`} 
                             alt="Andrew Dosumu" 
                             className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 transform group-hover:scale-105"
                           />
@@ -255,7 +253,7 @@ export default function Home() {
                           id: '01',
                           title: "Cortex AI",
                           subtitle: "Intelligent Trading System • Quant AI",
-                          image: `${basePath}/cortex.png`,
+                          image: `/cortex.png`,
                           color: "from-purple-900 to-blue-900",
                           description: "An institutional-grade algorithmic trading platform that fuses Machine Learning (SVC Ensemble), RAG-powered AI reasoning (Llama 3.1), and professional risk management into a unified quantitative trading infrastructure.",
                           technologies: ["Python", "Flask", "Ollama", "ChromaDB", "Scikit-learn", "MetaTrader 5", "Binance API"],
@@ -266,7 +264,7 @@ export default function Home() {
                           id: '02',
                           title: "The Creation of Adam",
                           subtitle: "Narrative • Interactive 3D Experience",
-                          image: `${basePath}/DawnOfMan.png`,
+                          image: `/DawnOfMan.png`,
                           color: "from-orange-900 to-red-900",
                           offset: true,
                           description: "An immersive 3D digital reconstruction of Michelangelo's Sistine Chapel masterpiece deconstructed through scroll-driven animations and procedural rendering.",
@@ -279,7 +277,7 @@ export default function Home() {
                           id: '03',
                           title: "Klaus",
                           subtitle: "AI Assistant • Agentic Coding",
-                          image: `${basePath}/klaus.png`,
+                          image: `/klaus.png`,
                           color: "from-blue-900 to-cyan-900",
                           description: "A professional-grade AI coding assistant for VS Code featuring an autonomous 'Composer' mode, sequential thinking for complex problem solving, and a 70% success rate on SWE-bench.",
                           technologies: ["TypeScript", "Node.js", "LangChain", "React", "LanceDB", "Ollama"],
@@ -290,7 +288,7 @@ export default function Home() {
                           id: '04',
                           title: "MSG",
                           subtitle: "Secure Messaging • E2E Encryption",
-                          image: `${basePath}/msg.png`,
+                          image: `/msg.png`,
                           color: "from-green-900 to-emerald-900",
                           offset: true,
                           description: "A production-ready real-time messaging platform inspired by Telegram and WhatsApp, featuring military-grade client-side encryption for total privacy.",
@@ -302,7 +300,7 @@ export default function Home() {
                           id: '05',
                           title: "Smart Attendance System",
                           subtitle: "AI Biometrics • Computer Vision",
-                          image: `${basePath}/Smart Attendance Sysem.png`,
+                          image: `/Smart Attendance Sysem.png`,
                           color: "from-indigo-900 to-violet-900",
                           description: "My Final Year Project: An advanced attendance tracking solution utilizing Microsoft Kinect V2 sensors for multi-modal biometric validation, integrating depth and IR streams for high-precision face recognition and anti-spoofing.",
                           technologies: ["Python", "OpenCV", "Kinect SDK", "Face Recognition", "Flask"],
@@ -314,7 +312,7 @@ export default function Home() {
                           id: '06',
                           title: "Mobile Terminal Portfolio",
                           subtitle: "Terminal UI • Retro Experience",
-                          image: `${basePath}/terminalportfolio.png`,
+                          image: `/terminalportfolio.png`,
                           color: "from-slate-900 to-zinc-900",
                           offset: true,
                           description: "A unique terminal-based mobile portfolio experience that brings retro command-line power and interactive games to modern touchscreens.",
@@ -327,7 +325,7 @@ export default function Home() {
                           id: '07',
                           title: "Terra",
                           subtitle: "Environmental • 3D Visualization",
-                          image: `${basePath}/terra.png`,
+                          image: `/terra.png`,
                           color: "from-blue-900 to-indigo-900",
                           description: "An immersive 3D visualization experience showcasing Earth's fragility through scroll-driven storytelling, featuring real-time ISS orbital tracking and NASA-sourced imagery.",
                           technologies: ["React 19", "Three.js", "GSAP", "Tailwind CSS 4", "Vite", "Sharp"],
