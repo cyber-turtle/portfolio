@@ -470,8 +470,8 @@ export default function Home() {
                       {/* Step 1 */}
                       <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">01</div>
-                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Discovery</h4>
-                          <p className="text-sm text-white/70 leading-relaxed">Deep dive into brand DNA. We deconstruct the problem to find the core narrative thread.</p>
+                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Analysis</h4>
+                          <p className="text-sm text-white/70 leading-relaxed">Deconstructing complex requirements into technical specifications. Identifying the optimal stack and architectural patterns for the problem space.</p>
                           <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-1/4"></div>
                           </div>
@@ -480,8 +480,8 @@ export default function Home() {
                       {/* Step 2 */}
                       <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">02</div>
-                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Design</h4>
-                          <p className="text-sm text-white/70 leading-relaxed">High-fidelity exploration. We create maximalist visual systems that scale.</p>
+                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Architecture</h4>
+                          <p className="text-sm text-white/70 leading-relaxed">Designing the foundational systems. Crafting scalable schemas, robust API contracts, and high-performance system lifecycles.</p>
                           <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-2/4"></div>
                           </div>
@@ -490,8 +490,8 @@ export default function Home() {
                       {/* Step 3 */}
                       <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">03</div>
-                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Develop</h4>
-                          <p className="text-sm text-white/70 leading-relaxed">Clean code. Shader magic. Performance optimization. Bringing the vision to life.</p>
+                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Engineering</h4>
+                          <p className="text-sm text-white/70 leading-relaxed">Implementing logic with precision. Writing type-safe, performant codebases and optimizing shaders for a seamless experience.</p>
                           <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-3/4"></div>
                           </div>
@@ -500,8 +500,8 @@ export default function Home() {
                       {/* Step 4 */}
                       <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">04</div>
-                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Deploy</h4>
-                          <p className="text-sm text-white/70 leading-relaxed">Rigorous testing. Smooth launch. Handover with documentation.</p>
+                          <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Deployment</h4>
+                          <p className="text-sm text-white/70 leading-relaxed">Resilient delivery workflows. Automated CI/CD pipelines, rigorous testing, and cloud-scale infrastructure for growth.</p>
                           <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-full"></div>
                           </div>
