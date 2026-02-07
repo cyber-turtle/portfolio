@@ -468,41 +468,41 @@ export default function Home() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                       {/* Step 1 */}
-                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group flex flex-col h-full">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">01</div>
                           <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Analysis</h4>
                           <p className="text-sm text-white/70 leading-relaxed">Deconstructing complex requirements into technical specifications. Identifying the optimal stack and architectural patterns for the problem space.</p>
-                          <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
+                          <div className="w-full h-1 bg-white/10 mt-auto overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-1/4"></div>
                           </div>
                       </div>
 
                       {/* Step 2 */}
-                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group flex flex-col h-full">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">02</div>
                           <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Architecture</h4>
                           <p className="text-sm text-white/70 leading-relaxed">Designing the foundational systems. Crafting scalable schemas, robust API contracts, and high-performance system lifecycles.</p>
-                          <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
+                          <div className="w-full h-1 bg-white/10 mt-auto overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-2/4"></div>
                           </div>
                       </div>
 
                       {/* Step 3 */}
-                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group flex flex-col h-full">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">03</div>
                           <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Engineering</h4>
                           <p className="text-sm text-white/70 leading-relaxed">Implementing logic with precision. Writing type-safe, performant codebases and optimizing shaders for a seamless experience.</p>
-                          <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
+                          <div className="w-full h-1 bg-white/10 mt-auto overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-3/4"></div>
                           </div>
                       </div>
 
                       {/* Step 4 */}
-                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                      <div className="glass-card p-8 rounded-2xl relative overflow-hidden group flex flex-col h-full">
                           <div className="absolute top-0 right-0 p-4 text-6xl font-syne font-bold text-white/5 group-hover:text-white/20 transition-colors">04</div>
                           <h4 className="text-xl font-bold mb-4 text-[#ccff00]">Deployment</h4>
                           <p className="text-sm text-white/70 leading-relaxed">Resilient delivery workflows. Automated CI/CD pipelines, rigorous testing, and cloud-scale infrastructure for growth.</p>
-                          <div className="w-full h-1 bg-white/10 mt-6 overflow-hidden rounded-full">
+                          <div className="w-full h-1 bg-white/10 mt-auto overflow-hidden rounded-full">
                               <div className="h-full bg-[#ccff00] w-full"></div>
                           </div>
                       </div>
