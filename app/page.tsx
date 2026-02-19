@@ -137,7 +137,16 @@ export default function Home() {
               <a href="#work" className="hover:text-[#ccff00] transition-colors">Work</a>
               <a href="#contact" className="hover:text-[#ccff00] transition-colors">Contact</a>
           </div>
-          <a href="#contact" className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm uppercase hover:bg-[#ccff00] hover:scale-105 transition-all">Let's Talk</a>
+          <div className="flex gap-2 sm:gap-4 items-center">
+              <a 
+                href="https://drive.google.com/uc?export=download&id=1xUy_1ZD8RaQYyZSnA9k-7iSXPUhaYhJ3" 
+                className="inline-block border border-white/20 px-4 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-sm uppercase hover:bg-white/10 transition-all"
+                download
+              >
+                Resume
+              </a>
+              <a href="#contact" className="bg-white text-black px-3 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-sm uppercase hover:bg-[#ccff00] hover:scale-105 transition-all">Let's Talk</a>
+          </div>
       </nav>
 
       <main className="text-white relative z-10">
