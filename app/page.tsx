@@ -303,6 +303,7 @@ export default function Home() {
                           description: "A production-ready real-time messaging platform inspired by Telegram and WhatsApp, featuring military-grade client-side encryption for total privacy.",
                           technologies: ["MERN Stack", "Socket.io", "Web Crypto API", "WebRTC", "RSA-OAEP", "AES-GCM"],
                           challenges: "Implementing a zero-trust E2E architecture where private keys never leave the client, and conducting intensive security audits to eliminate key exchange vulnerabilities.",
+                          demoUrl: "https://msg.andrewdosumu.com",
                           githubUrl: "https://github.com/cyber-turtle/msg-realtime-E2E-encryption-messaging-app"
                         },
                         {
