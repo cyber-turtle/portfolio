@@ -273,7 +273,7 @@ export default function Home() {
                           id: '02',
                           title: "Founder Lens",
                           subtitle: "Autonomous Agent • Startup Research",
-                          image: `/founderlens.png`,
+                          image: `/founder-lens.png`,
                           color: "from-amber-900 to-orange-900",
                           offset: true,
                           description: "A 7-phase autonomous startup research agent that saves non-technical founders weeks of manual research. Users submit a startup idea and the agent fires 9 parallel Exa.ai web searches to gather TAM/SAM/SOM data, Crunchbase VC trends, direct competitors, failed startup postmortems, and verbatim customer complaints from Reddit and G2. A Contrarian VC persona then analyzes the data to find the fatal flaw. The brief is synthesized, stored in Lamatic Semantic Memory (via Weaviate vector DB), and retrieved via RAG for interactive chat.",
