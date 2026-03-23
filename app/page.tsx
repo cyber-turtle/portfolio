@@ -271,16 +271,15 @@ export default function Home() {
                         },
                         {
                           id: '02',
-                          title: "The Creation of Adam",
-                          subtitle: "Narrative • Interactive 3D Experience",
-                          image: `/DawnOfMan.png`,
-                          color: "from-orange-900 to-red-900",
+                          title: "Founder Lens",
+                          subtitle: "Autonomous Agent • Startup Research",
+                          image: `/founderlens.png`,
+                          color: "from-amber-900 to-orange-900",
                           offset: true,
-                          description: "An immersive 3D digital reconstruction of Michelangelo's Sistine Chapel masterpiece deconstructed through scroll-driven animations and procedural rendering.",
-                          technologies: ["Next.js 15", "Three.js", "GSAP", "TypeScript", "Tailwind CSS"],
-                          challenges: "Coordinating complex 3D camera paths with multi-layered narrative triggers while maintaining 60 FPS performance across devices.",
-                          demoUrl: "https://cyber-turtle.github.io/Dawn-Of-Man/",
-                          githubUrl: "https://github.com/cyber-turtle/Dawn-Of-Man"
+                          description: "A 7-phase autonomous startup research agent that saves non-technical founders weeks of manual research. Users submit a startup idea and the agent fires 9 parallel Exa.ai web searches to gather TAM/SAM/SOM data, Crunchbase VC trends, direct competitors, failed startup postmortems, and verbatim customer complaints from Reddit and G2. A Contrarian VC persona then analyzes the data to find the fatal flaw. The brief is synthesized, stored in Lamatic Semantic Memory (via Weaviate vector DB), and retrieved via RAG for interactive chat.",
+                          technologies: ["Next.js", "Exa.ai", "Weaviate", "Lamatic AI", "RAG", "AgentKit"],
+                          challenges: "Orchestrating 9 parallel web searches across disparate sources and synthesizing contradictory signals into a coherent Contrarian VC analysis, while ensuring low-latency streaming of the multi-phase agent pipeline to the frontend.",
+                          demoUrl: "https://founder-lens-agentkit.vercel.app/"
                         },
                         {
                           id: '03',
@@ -342,8 +341,21 @@ export default function Home() {
                           challenges: "Sourcing and optimizing high-resolution NASA textures for a smooth 60 FPS 3D experience, and synchronizing complex orbital physics with scroll-triggered animations.",
                           demoUrl: "https://cyber-turtle.github.io/Terra-TheBlueDot/",
                           githubUrl: "https://github.com/cyber-turtle/Terra-TheBlueDot"
+                        },
+                        {
+                          id: '08',
+                          title: "The Creation of Adam",
+                          subtitle: "Narrative • Interactive 3D Experience",
+                          image: `/DawnOfMan.png`,
+                          color: "from-orange-900 to-red-900",
+                          offset: true,
+                          description: "An immersive 3D digital reconstruction of Michelangelo's Sistine Chapel masterpiece deconstructed through scroll-driven animations and procedural rendering.",
+                          technologies: ["Next.js 15", "Three.js", "GSAP", "TypeScript", "Tailwind CSS"],
+                          challenges: "Coordinating complex 3D camera paths with multi-layered narrative triggers while maintaining 60 FPS performance across devices.",
+                          demoUrl: "https://cyber-turtle.github.io/Dawn-Of-Man/",
+                          githubUrl: "https://github.com/cyber-turtle/Dawn-Of-Man"
                         }
-                      ].map((project, i) => (
+                       ].map((project, i) => (
                         <div key={project.title} className={`group cursor-none ${project.offset ? 'md:mt-24' : ''}`}>
                             <div 
                               onClick={() => setSelectedProject(project)}
